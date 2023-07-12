@@ -1,0 +1,28 @@
+.product {
+    background-color:linen;
+    padding: 20px;
+    margin-bottom: 20px;
+    }
+    h2 {
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .routerB{
+     color: black ;
+    }
+
+    input.ng-invalid {
+        background-color: pink;
+        border-left: 3px solid red;
+    }
+    input.ng-untauched{
+        background-color: lightgoldenrodyellow;
+
+    }
+    input.ng-valid.ng-touched{
+        background-color: lightgreen;
+
+    }
+
+  .alert{
+color: red;
+    }

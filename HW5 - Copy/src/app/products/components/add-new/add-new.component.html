@@ -1,0 +1,35 @@
+<form #productForm="ngForm">
+<div>
+    <label>
+        Name: <input type="text" [(ngModel)]="product.name" name="name" required #name="ngModel"/>
+        <div *ngIf="name.invalid && name.touched" class="alert alert-danger">Name is required</div>
+    </label>
+    <label>
+        Description: <input type="text" [(ngModel)]="product.description " name="description" required #description="ngModel"/>
+        <div *ngIf="description.invalid && description.touched" class="alert alert-danger">Description is required</div>
+
+    </label>
+    <label>
+        Price: <input type="number" [(ngModel)]="product.price" name="price" required #price="ngModel"/>
+        <div *ngIf="price.invalid && price.touched" class="alert alert-danger">Price is required</div>
+
+    </label>
+    <label>
+        City: <input type="text" [(ngModel)]="product.city" name="city" required #city="ngModel"/>
+        <div *ngIf="city.invalid && city.touched" class="alert alert-danger">City is required</div>
+
+    </label>
+    <label>
+        Telephone: <input type="text" [(ngModel)]="product.telephone" name="telephone" required #telephone="ngModel"/>
+        <div *ngIf="telephone.invalid && telephone.touched" class="alert alert-danger">Telephone is required</div>
+
+    </label>
+    <label>
+        Photo: <input type="text" [(ngModel)]="product.image" name="image" required #image="ngModel"/>
+        <div *ngIf="image.invalid && image.touched" class="alert alert-danger">Photo is required</div>
+
+    </label>
+    <button (click)="addPet(product)"[routerLink]="''" [disabled]="productForm.invalid">Save</button>
+
+</div>
+</form>

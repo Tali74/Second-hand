@@ -1,0 +1,16 @@
+<button (click)="orderBy = orderBy === 'asc' ? 'desc' : 'asc'">
+     Sort by price
+  </button>
+  <ul>
+    <div *ngFor="let product of products | orderBy: orderBy">
+    </div>
+  </ul>
+<div class="product" *ngFor="let product of products">
+    <h2>The Product: {{product.name}} </h2>
+    <p> Date published: {{product.date}}</p>
+    <img [src]="product.image" width="400">
+    <p>Price: {{product.price}} ILS</p>
+    <button (click)="delete(product.id)" >Purchase</button> |
+    <button> <a class="routerB" [routerLink]="'/product/'+product.id">Show Details</a></button> 
+
+</div>

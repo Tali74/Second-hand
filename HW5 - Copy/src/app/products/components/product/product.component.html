@@ -1,0 +1,11 @@
+<div class="product">
+    <h2>The Product: {{product.name}} </h2>
+    <p> Description: {{product.description}}</p>
+    <img [src]="product.image" width="400">
+    <p>Price: {{product.price}} ILS</p>
+    <p>City: {{product.city}}</p>
+    <p>Telephone: {{product.telephone}}</p>
+    <button (click)="delete(product.id)" [routerLink]="''">Purchase</button> |
+    <button> <a class="routerB" [routerLink]="''">Back</a></button> 
+
+</div>
